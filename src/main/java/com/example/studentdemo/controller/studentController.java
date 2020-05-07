@@ -35,6 +35,11 @@ public class studentController {
 	public Student getStudent(@PathVariable int id){
 		return studentReposetory.findById(id).get();
 	}
+
+	@GetMapping(path="/get/{id}")
+	public Student get(@PathVariable int id){
+		return studentReposetory.findById(id).get();
+	}
 	
 	@PostMapping(path="/saveStudent")
 	public ResponseEntity<Object> saveStudent(@RequestBody Student student){
